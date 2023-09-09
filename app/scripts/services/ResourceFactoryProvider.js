@@ -264,7 +264,7 @@
                     userListResource: defineResource(apiVer + "/users/:userId", {userId: '@userId'}, {
                         getAllUsers: {method: 'GET', params: {}, isArray: true},
                         update: { method: 'PUT' },
-                        blockOrUnblock: {method: 'POST', params: {userId: '@userId',command: '@command', blockDays: '@blockDays'}}
+                        blockOrUnblock: {method: 'POST', params: {userId: '@userId',command: '@command'}}
                     }),
                     userTemplateResource: defineResource(apiVer + "/users/template", {}, {
                         get: {method: 'GET', params: {}}
