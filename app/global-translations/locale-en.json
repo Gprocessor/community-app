@@ -4416,6 +4416,11 @@
   "label.tooltip.fixed.pricipal.percentage.per.installment" : "Principal portion of the instalments except the last installment will be fixed to this value.",  
   "label.input.change.fixed.principal.percentage.per.installment" : "Change Fixed Principal % per instalment",
   "label.input.new.fixed.principal.percentage.per.installment" : "New Fixed Principal % per instalment",
-
+  "label.button.blockuser": "Block",
+  "label.button.unblockuser": "Unblock",
+  "label.heading.blockuser": "Confirm Block?",
+  "label.heading.unblockuser": "Confirm Unblock?",
+  "label.input.blockdays": "Block Days",
+  "validation.msg.user.blockDays.not.greater.than.zero": "Block days should be greater than zero.",
   "----End---": "--End of file--- "
 }
