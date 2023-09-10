@@ -43,9 +43,43 @@
             <button class="btn btn-primary" ng-click="delete()">{{'label.button.confirm' | translate}}</button>
         </div>
     </script>
+    <script type="text/ng-template" id="blockuser.html">
+        <div class="modal-header silver">
+            <h3 class="bolder">{{'label.heading.blockuser' | translate}}</h3>
+            <label class="control-label col-sm-4" for="password">{{ 'label.input.blockdays' | translate }}<span
+                    class="required">*</span></label>
+            <div class="col-sm-5">
+                <input type="text" id="daystoblock" ng-model="data.blockDays" class="form-control" required late-Validate number/>
+                <form-validate valattributeform="daystoblockform" valattribute="daystoblock"/>
+            </div>
+        </div>
+        <div class="modal-body ">
+            <api-validate></api-validate>
+            <br>
+            <button class="btn btn-default" ng-click="cancel()">{{'label.button.cancel' | translate}}</button>
+            <button class="btn btn-primary" ng-click="block()">{{'label.button.confirm' | translate}}</button>
+        </div>
+    </script>
+    <script type="text/ng-template" id="unblockuser.html">
+        <div class="modal-header silver">
+            <h3 class="bolder">{{'label.heading.unblockuser' | translate}}</h3>
+        </div>
+        <div class="modal-body ">
+            <api-validate></api-validate>
+            <br>
+            <button class="btn btn-default" ng-click="cancel()">{{'label.button.cancel' | translate}}</button>
+            <button class="btn btn-primary" ng-click="unblock()">{{'label.button.confirm' | translate}}</button>
+        </div>
+    </script>
     <div class="card well">
         <div class="pull-right">
             <div class="form-group">
+                <button type="button" ng-hide="user.isLockedOut" class="btn btn-warning" data-ng-click="blockuser()" has-permission='BLOCK_USER'><i class="fa fa-user"></i>
+                    {{'label.button.blockuser' | translate}}
+                </button>
+                <button type="button" ng-hide="!user.isLockedOut" class="btn btn-warning" data-ng-click="unblockuser()" has-permission='UNBLOCK_USER'><i class="fa fa-user"></i>
+                    {{'label.button.unblockuser' | translate}}
+                </button>
                 <a href="#/edituser/{{user.id}}" class="btn btn-primary" has-permission='UPDATE_USER'><i class="fa fa-edit "></i>
                     {{'label.button.edit' | translate}}</a>
                 <button type="button" ng-click="deleteuser()" class="btn btn-danger" has-permission='DELETE_USER'>
