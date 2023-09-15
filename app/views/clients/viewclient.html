@@ -226,11 +226,9 @@
                                         <li data-ng-show="client.status.value=='Active'">
 											<a href="#/createshareaccount/{{client.id}}" has-permission='CREATE_SHAREACCOUNT'>{{'label.button.newshareaccount' | translate}}</a>
 										</li>
-
 										<li data-ng-show="client.status.value=='Active'">
 											<a href="#/createclientcollateral/{{client.id}}" has-permission='CREATE_COLLATERAL'>{{'label.button.createcollateral' | translate}}</a>
 										</li>
-
 										<li data-ng-show="client.status.value=='Active'">
 											<a href="#/newclientfixeddepositaccount/{{client.id}}" has-permission='CREATE_FIXEDDEPOSITACCOUNT'>{{'label.newfixeddepositaccount' | translate}}</a>
 										</li>
@@ -1325,3 +1323,7 @@
             </div>
         </div>
     </div>
+			</uib-tabset>
+		</div>
+	</div>
+</div>
