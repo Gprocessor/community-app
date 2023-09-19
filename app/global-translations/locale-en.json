@@ -2950,6 +2950,7 @@
   "error.msg.duplicate.entity.mapping": "Duplicate mapping, EntityMapping already exist",
   "error.msg.invalid.endDate": "End date cannot be before start date",
   "error.msg.password.reset.days.value.must.be.greater.than.zero": "For enabling 'Force Password Reset Days' configuration , the value (number of days after which a user is forced to reset his password) must be set to a number greater than 0.",
+  "error.msg.restrict.reuse.password.value.must.be.greater.than.zero": "For enabling 'Restrict-re-use-of-password' configuration , the value (number of previous password/s to reuse) must be set to a number greater than 0.",
   "#tool tip for global configuration": "..",
   "label.tooltip.global.allow-transactions-on-holiday": "Determines if transactions will be permitted on holidays.",
   "label.tooltip.global.allow-transactions-on-non_workingday": "Determines if transactions will be permitted on non-working days, such as weekends.",
@@ -4417,6 +4418,11 @@
   "label.input.change.fixed.principal.percentage.per.installment" : "Change Fixed Principal % per instalment",
   "label.input.new.fixed.principal.percentage.per.installment" : "New Fixed Principal % per instalment",
   "success.forgot.password.reset":"Password reset Successfully! Check your email.",
-
+  "label.button.blockuser": "Block",
+  "label.button.unblockuser": "Unblock",
+  "label.heading.blockuser": "Confirm Block?",
+  "label.heading.unblockuser": "Confirm Unblock?",
+  "label.input.blockdays": "Block Days",
+  "validation.msg.user.blockDays.not.greater.than.zero": "Block days should be greater than zero.",
   "----End---": "--End of file--- "
 }

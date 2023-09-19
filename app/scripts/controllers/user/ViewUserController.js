@@ -18,6 +18,19 @@
                     controller: UserDeleteCtrl
                 });
             };
+            scope.blockuser = function (blockdays) {
+                $uibModal.open({
+                    templateUrl: 'blockuser.html',
+                    controller: UserBlockCtrl
+                });
+            };
+
+            scope.unblockuser = function () {
+                $uibModal.open({
+                    templateUrl: 'unblockuser.html',
+                    controller: UserUnblockCtrl
+                });
+            };
             var ModalInstanceCtrl = function ($scope, $uibModalInstance) {
                 $scope.save = function (staffId) {
                     resourceFactory.userListResource.update({'userId': routeParams.id}, this.formData, function (data) {
@@ -47,6 +60,34 @@
                     $uibModalInstance.dismiss('cancel');
                 };
             };
+
+            var UserBlockCtrl = function ($scope, $uibModalInstance) {
+                $scope.data = {
+                    blockDays: 1,
+                    locale: scope.optlang.code
+                };
+                $scope.block = function () {
+                    resourceFactory.userListResource.blockOrUnblock({'userId': routeParams.id, command: 'block'}, $scope.data, function (data) {
+                        $uibModalInstance.close('block');
+                        route.reload();
+                    });
+                };
+                $scope.cancel = function () {
+                    $uibModalInstance.dismiss('cancel');
+                };
+            };
+
+            var UserUnblockCtrl = function ($scope, $uibModalInstance) {
+                $scope.unblock = function () {
+                    resourceFactory.userListResource.blockOrUnblock({'userId': routeParams.id, command: 'unblock'}, {}, function (data) {
+                        $uibModalInstance.close('unblock');
+                        route.reload();
+                    });
+                };
+                $scope.cancel = function () {
+                    $uibModalInstance.dismiss('cancel');
+                };
+            }
 
         }
     });

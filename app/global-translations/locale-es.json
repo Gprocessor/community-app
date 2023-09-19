@@ -4040,5 +4040,11 @@
 	"label.anchor.editrate": "Editar Tasa",
 	"label.error.rate.already.exist": "Tasa ya existe.",
 	"label.selectrate": "Seleccione Tasa",
+	"label.button.blockuser": "Bloquear",
+	"label.button.unblockuser": "Desbloquear",
+	"label.heading.blockuser": "¿Confirmar el bloqueo?",
+	"label.heading.unblockuser": "¿Confirmar el desbloqueo?",
+	"label.input.blockdays": "Días de bloqueo",
+	"validation.msg.user.blockDays.not.greater.than.zero": "El nro. de días de bloqueo debe ser mayor a cero.",
 	"----End---": "---Fin del archivo---"
 }
