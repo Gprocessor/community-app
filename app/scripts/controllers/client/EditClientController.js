@@ -25,19 +25,13 @@
                     firstname: data.firstname,
                     lastname: data.lastname,
                     middlename: data.middlename,
-                    active: data.active,
                     accountNo: data.accountNo,
                     staffId: data.staffId,
                     externalId: data.externalId,
                     isStaff:data.isStaff,
                     mobileNo: data.mobileNo,
                     savingsProductId: data.savingsProductId,
-                    genderId: data.gender.id,
                     fullname: data.fullname,
-                    clientNonPersonDetails : {
-                        incorpNumber: data.clientNonPersonDetails.incorpNumber,
-                        remarks: data.clientNonPersonDetails.remarks
-                    }
                 };
 
                 if(data.gender){
@@ -56,13 +50,22 @@
                     scope.displayPersonOrNonPersonOptions(data.legalForm.id);
                     scope.formData.legalFormId = data.legalForm.id;
                 }
+                if (data.clientNonPersonDetails) {
+                    scope.formData.clientNonPersonDetails.incorpNumber = data.clientNonPersonDetails.incorpNumber;
+                    scope.formData.clientNonPersonDetails.remarks = data.clientNonPersonDetails.remarks;
 
-                if(data.clientNonPersonDetails.constitution){
-                    scope.formData.clientNonPersonDetails.constitutionId = data.clientNonPersonDetails.constitution.id;
-                }
+                    if(data.clientNonPersonDetails.constitution){
+                        scope.formData.clientNonPersonDetails.constitutionId = data.clientNonPersonDetails.constitution.id;
+                    }
 
-                if(data.clientNonPersonDetails.mainBusinessLine){
-                    scope.formData.clientNonPersonDetails.mainBusinessLineId = data.clientNonPersonDetails.mainBusinessLine.id;
+                    if(data.clientNonPersonDetails.mainBusinessLine){
+                        scope.formData.clientNonPersonDetails.mainBusinessLineId = data.clientNonPersonDetails.mainBusinessLine.id;
+                    }
+
+                    if (data.clientNonPersonDetails.incorpValidityTillDate) {
+                        var incorpValidityTillDate = dateFilter(data.clientNonPersonDetails.incorpValidityTillDate, scope.df);
+                        scope.date.incorpValidityTillDate = new Date(incorpValidityTillDate);
+                    }
                 }
 
                 if (data.savingsProductId != null) {
@@ -75,11 +78,6 @@
                 if (data.dateOfBirth) {
                     var dobDate = dateFilter(data.dateOfBirth, scope.df);
                     scope.date.dateOfBirth = new Date(dobDate);
-                }
-
-                if (data.clientNonPersonDetails.incorpValidityTillDate) {
-                    var incorpValidityTillDate = dateFilter(data.clientNonPersonDetails.incorpValidityTillDate, scope.df);
-                    scope.date.incorpValidityTillDate = new Date(incorpValidityTillDate);
                 }
 
                 var actDate = dateFilter(data.activationDate, scope.df);
