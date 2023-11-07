@@ -4519,8 +4519,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
 /* line 71, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-primary {
   color: #fff;
-  background-color: #4f99ed;
-  border-color: #388ceb;
+  background-color: #f2132c;
+  border-color: #f2132c;
 }
 /* line 11, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-primary:focus, .btn-primary.focus {
@@ -4531,8 +4531,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
 /* line 17, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-primary:hover {
   color: #fff;
-  background-color: #217ee8;
-  border-color: #156dd0;
+  background-color: #d91127;
+  border-color: #d91127;
 }
 /* line 22, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
@@ -10518,12 +10518,12 @@ textarea {
 
 /* line 48, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding.scss */
 a {
-  color: #4f99ed;
+  color: #f2132c;
   text-decoration: none;
 }
 /* line 52, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding.scss */
 a:hover, a:focus {
-  color: #1672d9;
+  color: #d91127;
   text-decoration: underline;
 }
 /* line 58, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding.scss */
@@ -13062,8 +13062,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
 /* line 71, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-primary {
   color: #fff;
-  background-color: #4f99ed;
-  border-color: #388ceb;
+  background-color: #f2132c;
+  border-color: #f2132c;
 }
 /* line 11, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-primary:focus, .btn-primary.focus {
@@ -13074,8 +13074,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
 /* line 17, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-primary:hover {
   color: #fff;
-  background-color: #217ee8;
-  border-color: #156dd0;
+  background-color: #d91127;
+  border-color: #d91127;
 }
 /* line 22, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
@@ -19717,7 +19717,7 @@ body {
 
 /* line 20, ../styles-dev/main/components/_content.scss */
 ul.nav-tabs > li.active > a {
-  border-top: solid 3px #428bca !important;
+  border-top: solid 3px #f2132c !important;
 }
 
 /* line 27, ../styles-dev/main/components/_content.scss */
@@ -20441,7 +20441,7 @@ span.required {
 
 /* line 9, ../styles-dev/main/components/_layout.scss */
 .navbar-default .navbar-nav .open .dropdown-menu > li > a, .navbar-default .navbar-nav > li > a {
-  color: #4f99ed !important;
+  color: #f2132c !important;
 }
 
 /* line 13, ../styles-dev/main/components/_layout.scss */
